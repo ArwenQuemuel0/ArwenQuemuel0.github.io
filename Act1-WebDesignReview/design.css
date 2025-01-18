@@ -1,0 +1,139 @@
+body {
+  font-family: "Roboto Slab", serif;
+  color: #ffffff;
+  background-image: url("https://img.freepik.com/free-vector/paper-style-wavy-red-background_52683-74121.jpg?t=st=1737188799~exp=1737192399~hmac=9666e6f26bceaefa9dd4c8597430125493343a54ebba242c723d891c18aed082&w=1380");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100;
+}
+
+.container {
+  margin-top: 40px;
+  text-align: center;
+  padding: 50px;
+  border-radius: 20px;
+  border: 2px solid #800000;
+  background: #b22222;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  width: 35%;
+}
+
+.header h1 {
+  color: #ffffff;
+  font-size: xxx-large;
+}
+
+.form-container form {
+  margin-top: 20px;
+}
+
+form h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-family: "Roboto Slab", serif;
+  font-size: medium;
+  width: 70%;
+  padding: 20px;
+  margin: 5px;
+  border: 2px solid #800000;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: "Roboto Slab", serif;
+  width: 50%;
+  margin-top: 10px;
+  padding: 6px;
+  background-color: #cd5c5c;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: medium;
+  cursor: pointer;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #cd5c5c;
+}
+
+.forgotpass a {
+  color: #ffb6c1;
+}
+
+.signup {
+  margin-top: 20px;
+  background-color: #cd5c5c;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: auto;
+    filter: drop-shadow(5px 5px 5px #222);
+
+}
+
+.other-signin {
+    margin: 20px;
+}
+
+.google, .github, .discord {
+    width: 30%;
+    padding: 6px;
+    border: none;
+    border-radius: 8px;
+    font-size: medium;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.google {
+    background-color: #cd5c5c;
+    color: #ffffff;
+}
+
+.google:hover {
+    background-color: #ffffff;
+    color: #cd5c5c;
+}
+
+.github {
+    background-color: #cd5c5c;
+    color: #ffffff;
+}
+
+.github:hover {
+    background-color: #ffffff;
+    color: #cd5c5c;
+}
+
+.discord {
+    background-color: #cd5c5c;
+    color: #ffffff;
+}
+
+.discord:hover {
+    background-color: #ffffff;
+    color: #cd5c5c;
+}
+
+footer {
+    color: #ffffff;
+    margin-top: 50px;
+    text-align: center;
+    font-size: smaller;
+}
