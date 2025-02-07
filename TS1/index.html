@@ -128,19 +128,19 @@
     </div>
 
     <div class="button-container">
-      <button id="changecolorbutton">Change Background Color</button>
+      <button id="changecolorbutton">Change Resume Color</button>
     </div>
 
     <script>
       const button = document.getElementById("changecolorbutton");
-      const body = document.body;
+      const resume = document.querySelector(".resume");
 
-      const colors = ["#e81e63", "#ef6292", "#f6a5c1", "#fad2e0", "#fde9ef"];
+      const colors = ["#ef6292", "#f6a5c1", "#fad2e0", "#fde9ef"];
       let index = 0;
 
       button.addEventListener("click", () => {
         index = (index + 1) % colors.length;
-        body.style.background = colors[index];
+        resume.style.backgroundColor = colors[index];
       });
     </script>
   </body>
