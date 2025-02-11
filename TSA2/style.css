@@ -17,13 +17,15 @@ body {
 .buttons {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .buttons button {
     padding: 15px 25px;
+    position: relative;
     font-size: 18px;
     font-weight: bold;
+    left: 50px;
     cursor: pointer;
     border: none;
     color: rgb(0, 0, 0);
