@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quemuel - TSA2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="buttons">
+            <button class="btn-monday" onclick="showBox('#ffadad')">Monday</button>
+            <button class="btn-tuesday" onclick="showBox('#ffd6a5')">Tuesday</button>
+            <button class="btn-wednesday" onclick="showBox('#fdffb6')">Wednesday</button>
+            <button class="btn-thursday" onclick="showBox('#caffbf')">Thursday</button>
+            <button class="btn-friday" onclick="showBox('#a0c4ff')">Friday</button>
+            <button class="btn-saturday" onclick="showBox('#bdb2ff')">Saturday</button>
+            <button class="btn-sunday" onclick="showBox('#ffc6ff')">Sunday</button>
+        </div>
+        <div class="box-container"></div>
+    </div>
+
+    <script>
+        let isAnimating = false;
+
+        function showBox(color) {
+            if (isAnimating) return; 
+            isAnimating = true;
+
+            let container = document.querySelector(".box-container");
+
+            let NextBox = document.createElement("div");
+            NextBox.classList.add("box");
+            NextBox.style.borderColor = color;
+            NextBox.style.backgroundColor = color; 
+
+            NextBox.style.top = "-400px";
+            NextBox.style.opacity = "0";
+
+            container.appendChild(NextBox);
+
+            setTimeout(() => {
+                NextBox.style.top = "200px";
+                NextBox.style.opacity = "1800";
+                NextBox.style.backgroundColor = "transparent";
+            }, 50);
+
+            let LastBox = document.querySelector(".box:not(:last-child)");
+            if (LastBox) {
+                LastBox.style.top = "-400px";
+                LastBox.style.opacity = "1500";
+                LastBox.style.backgroundColor = LastBox.style.borderColor;
+                setTimeout(() => LastBox.remove(), 900);
+            }
+
+            setTimeout(() => {
+                isAnimating = false;
+            }, 900);
+        }
+    </script>
+
+</body>
+</html>
