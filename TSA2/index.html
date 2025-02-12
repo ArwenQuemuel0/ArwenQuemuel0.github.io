@@ -23,42 +23,41 @@
 
     <script>
         let isAnimating = false;
-
+    
         function showBox(color) {
-            if (isAnimating) return; 
+            if (isAnimating) return;
             isAnimating = true;
-
+    
             let container = document.querySelector(".box-container");
-
+    
             let NextBox = document.createElement("div");
             NextBox.classList.add("box");
             NextBox.style.borderColor = color;
-            NextBox.style.backgroundColor = color; 
-
+            NextBox.style.backgroundColor = color;
             NextBox.style.top = "-400px";
             NextBox.style.opacity = "0";
-
+    
             container.appendChild(NextBox);
-
+    
             setTimeout(() => {
                 NextBox.style.top = "265px";
-                NextBox.style.opacity = "1800";
+                NextBox.style.opacity = "1";
                 NextBox.style.backgroundColor = "transparent";
             }, 50);
-
+    
             let LastBox = document.querySelector(".box:not(:last-child)");
             if (LastBox) {
                 LastBox.style.top = "-400px";
-                LastBox.style.opacity = "1500";
+                LastBox.style.opacity = "0";
                 LastBox.style.backgroundColor = LastBox.style.borderColor;
                 setTimeout(() => LastBox.remove(), 900);
             }
-
+    
             setTimeout(() => {
                 isAnimating = false;
             }, 900);
         }
     </script>
-
+    
 </body>
 </html>
