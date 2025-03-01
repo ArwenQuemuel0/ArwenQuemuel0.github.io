@@ -55,6 +55,15 @@ button:hover {
     color: #fff;
 }
 
-.operator:hover {
+.equals {
     background: #4d233d;
+    color: #fff;
+}
+
+.equals:hover {
+    background: #99798d;
+}
+
+.operator:hover {
+    background: #99798d;
 }
