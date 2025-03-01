@@ -31,8 +31,13 @@ body {
     gap: 5px;
 }
 
+.zero {
+    grid-column: span 2;
+    width: 149px;
+}
+
 button {
-    width: 60px;
+    width: 70px;
     height: 60px;
     font-size: 1.2em;
     border: none;
