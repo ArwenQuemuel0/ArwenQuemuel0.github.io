@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container text-center mt-4 position-relative">
+        <h1 class="mb-3">Best of Paradise</h1>
+        <p class="mb-4">Produced by Local Magazine</p>
+
+        <button class="btn btn-warning main-menu-btn" onclick="closeAllModals()">MAIN MENU</button>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card menu-item" onclick="showModal('dish1Modal')">
+                    <img src="food1.jpg" class="card-img-top" alt="Gabel Loffel">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">GABEL LOFFEL</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card menu-item" onclick="showModal('dish2Modal')">
+                    <img src="food2.jpg" class="card-img-top" alt="Gary Gari">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">GARY GARI</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card menu-item" onclick="showModal('dish3Modal')">
+                    <img src="food3.jpg" class="card-img-top" alt="Il Piatto">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">IL PIATTO</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card menu-item" onclick="showModal('dish4Modal')">
+                    <img src="food4.jpg" class="card-img-top" alt="Pierre Platters">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">PIERRE PLATTERS</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dish1Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Gabel Loffel</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Delicious dish made with fresh ingredients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dish2Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Gary Gari</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Amazing flavors that will satisfy your taste buds.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dish3Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Il Piatto</h5>
+                </div>
+                <div class="modal-body">
+                    <p>A perfect combination of flavors and textures.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dish4Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pierre Platters</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Exquisite seafood platter with a gourmet touch.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showModal(id) {
+            document.querySelectorAll('.modal.show').forEach(modal => {
+                let instance = bootstrap.Modal.getInstance(modal);
+                if (instance) {
+                    instance.hide();
+                }
+            });
+            let modal = new bootstrap.Modal(document.getElementById(id));
+            modal.show
+        }
