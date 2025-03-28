@@ -183,11 +183,11 @@ body {
 }
 
 .restaurant-name {
-    color: red;
-    font-size: 28px;
+    color: rgb(117, 31, 31); 
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 10px;
-    font-family: "Brush Script MT", cursive;
+    font-family: 'Style Script', cursive;
 }
 
 .restaurant-info-meta {
