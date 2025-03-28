@@ -4,112 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Guide</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Style+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container text-center mt-4 position-relative">
-        <h1 class="mb-3">Best of Paradise</h1>
-        <p class="mb-4">Produced by Local Magazine</p>
+    <button id="main-menu" class="main-menu-btn">MAIN MENU</button>
 
-        <button class="btn btn-warning main-menu-btn" onclick="closeAllModals()">MAIN MENU</button>
+    <div class="restaurant-guide">
+        <div class="header-banner">
+            <h1>Best of Merriden</h1>
+        </div>
+        <h2 class="guide-title">Restaurant Guide</h2>
+        <h3 class="guide-subtitle">Produced by: Local Magazine</h3>
 
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card menu-item" onclick="showModal('dish1Modal')">
-                    <img src="food1.jpg" class="card-img-top" alt="Gabel Loffel">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">GABEL LOFFEL</h5>
-                    </div>
+        <div class="food-selection">
+            <div class="food-item" onclick="showDetails('gabel-loffel')">
+                <div class="food-title">GABEL LOFFEL</div>
+                <img src="GABELCOVER.jpg" alt="Gabel Loffel">
+                <div class="hover-overlay">
+                    <p>Get out your Lederhosen!</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card menu-item" onclick="showModal('dish2Modal')">
-                    <img src="food2.jpg" class="card-img-top" alt="Gary Gari">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">GARY GARI</h5>
-                    </div>
+
+            <div class="food-item" onclick="showDetails('gary-gari')">
+                <div class="food-title">GARY GARI</div>
+                <img src="GARYCOVER.jpg" alt="Gary Gari">
+                <div class="hover-overlay">
+                    <p>The delicious headquarters for all your ginger-related needs!</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card menu-item" onclick="showModal('dish3Modal')">
-                    <img src="food3.jpg" class="card-img-top" alt="Il Piatto">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">IL PIATTO</h5>
-                    </div>
+
+            <div class="food-item" onclick="showDetails('il-piatto')">
+                <div class="food-title">IL PIATTO</div>
+                <img src="PIATTOCOVER.jpg" alt="Il Piatto">
+                <div class="hover-overlay">
+                    <p>Authentic Italian cuisine at its finest.</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card menu-item" onclick="showModal('dish4Modal')">
-                    <img src="food4.jpg" class="card-img-top" alt="Pierre Platters">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">PIERRE PLATTERS</h5>
-                    </div>
+
+            <div class="food-item" onclick="showDetails('pierre-platters')">
+                <div class="food-title">PIERRE PLATTERS</div>
+                <img src="PIERRECOVER.jpg" alt="Pierre Platters">
+                <div class="hover-overlay">
+                    <p>Got wild finicky kids? Head for Il Piatto for kid-friendly Italian Fun!</p>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="dish1Modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Gabel Loffel</h5>
+        <div class="restaurant-detail" id="gabel-loffel">
+            <div class="restaurant-left">
+                <div class="yellow-bar">GABEL LOFFEL</div>
+                <img src="GABELCONTENT.jpg" alt="Gabel Loffel">
+            </div>
+            <div class="restaurant-right">
+                <h2 class="restaurant-name">GABEL LOFFEL</h2>
+                <div class="restaurant-info-meta">
+                    <div class="restaurant-info">
+                        <p><strong>235 Glendale Ave.</strong><br>MERIDIEN CITY</p>
+                        <p><strong>T:</strong> 490 49 4000</p>
+                        <p><strong>W:</strong> GANDG.RES</p>
+                    </div>
+                    <div class="restaurant-meta">
+                        <p><strong>CATEGORY:</strong> Swiss</p>
+                        <p><strong>OPEN:</strong> 10AM to 10PM</p>
+                        <p><strong>PRICE:</strong> $$$</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p>Delicious dish made with fresh ingredients.</p>
-                </div>
+                <hr>
+                <p class="restaurant-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.</p>
+                <p class="restaurant-desc">Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+            <hr>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="dish2Modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Gary Gari</h5>
+        <div class="restaurant-detail" id="gary-gari">
+            <div class="restaurant-left">
+                <div class="yellow-bar">GARY GARI</div>
+                <img src="GARYCONTENT.jpg" alt="Gary Gari">
+            </div>
+            <div class="restaurant-right">
+                <h2 class="restaurant-name">GARY GARI</h2>
+                <div class="restaurant-info-meta">
+                    <div class="restaurant-info">
+                        <p><strong>76 NO. HIGHLAND AVE.,</strong><br>MERIDIEN CITY</p>
+                        <p><strong>T:</strong> 490 24 6709</p>
+                        <p><strong>W:</strong> GANDG.RES</p>
+                    </div>
+                    <div class="restaurant-meta">
+                        <p><strong>CATEGORY:</strong> Japanese</p>
+                        <p><strong>OPEN:</strong> 5PM to 10PM</p>
+                        <p><strong>PRICE:</strong> $$</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p>Amazing flavors that will satisfy your taste buds.</p>
-                </div>
+                <hr>
+                <p class="restaurant-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.</p>
+                <p class="restaurant-desc">Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+            <hr>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="dish3Modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Il Piatto</h5>
+        <div class="restaurant-detail" id="il-piatto">
+            <div class="restaurant-left">
+                <div class="yellow-bar">IL PIATTO</div>
+                <img src="PIATTOCONTENT.jpg" alt="Il Piatto">
+            </div>
+            <div class="restaurant-right">
+                <h2 class="restaurant-name">IL PIATTO</h2>
+                <div class="restaurant-info-meta">
+                    <div class="restaurant-info">
+                        <p><strong>1210 SHOUTOUT WAY</strong><br>MERIDIEN CITY</p>
+                        <p><strong>T:</strong> 490 42 1204</p>
+                        <p><strong>W:</strong> ILPIATTO.RES</p>
+                    </div>
+                    <div class="restaurant-meta">
+                        <p><strong>CATEGORY:</strong> Italian</p>
+                        <p><strong>OPEN:</strong> 11AM to 11PM</p>
+                        <p><strong>PRICE:</strong> $$</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p>A perfect combination of flavors and textures.</p>
-                </div>
+                <hr>
+                <p class="restaurant-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.</p>
+                <p class="restaurant-desc">Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+            <hr>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="dish4Modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Pierre Platters</h5>
+        <div class="restaurant-detail" id="pierre-platters">
+            <div class="restaurant-left">
+                <div class="yellow-bar">PIERRE PLATTERS</div>
+                <img src="PIERRECONTENT.jpg" alt="Pierre Platters">
+            </div>
+            <div class="restaurant-right">
+                <h2 class="restaurant-name">PIERRE PLATTERS</h2>
+                <div class="restaurant-info-meta">
+                    <div class="restaurant-info">
+                        <p><strong>68 8TH AVE.</strong><br>MERIDIEN CITY</p>
+                        <p><strong>T:</strong> 490 69 3080</p>
+                        <p><strong>W:</strong> PIERREP.RES</p>
+                    </div>
+                    <div class="restaurant-meta">
+                        <p><strong>CATEGORY:</strong> FUSHION</p>
+                        <p><strong>OPEN:</strong> 11AM to 11PM</p>
+                        <p><strong>PRICE:</strong> $$$</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p>Exquisite seafood platter with a gourmet touch.</p>
-                </div>
+                <hr>
+                <p class="restaurant-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis.</p>
+                <p class="restaurant-desc">Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+            <hr>
             </div>
         </div>
     </div>
 
     <script>
-        function showModal(id) {
-            document.querySelectorAll('.modal.show').forEach(modal => {
-                let instance = bootstrap.Modal.getInstance(modal);
-                if (instance) {
-                    instance.hide();
-                }
+        function showDetails(restaurantId) {
+            document.querySelectorAll(".restaurant-detail").forEach(detail => {
+                detail.style.display = "none";
             });
-            let modal = new bootstrap.Modal(document.getElementById(id));
-            modal.show
+
+            document.querySelector(".food-selection").style.display = "none";
+
+            document.getElementById(restaurantId).style.display = "flex";
         }
+
+        document.getElementById("main-menu").addEventListener("click", function () {
+            document.querySelector(".food-selection").style.display = "flex";
+
+            document.querySelectorAll(".restaurant-detail").forEach(detail => {
+                detail.style.display = "none";
+            });
+        });
+    </script>
+
+</body>
+</html>
